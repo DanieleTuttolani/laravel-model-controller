@@ -16,8 +16,23 @@
 </head>
 
 <body>
-<div class="text-center bg-dark text-light p-5 mb-5">
-    <h1>Lista Film</h1>
+<div class="text-center text-light">
+    <h1 class=" bg-dark text-light p-5 mb-5">Lista Film</h1>
+    <div class="container">
+        <div class="row g-5">
+            @foreach ($movies as $movie)
+                <div class="col p4 flex-grow-0">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title text-dark">{{$movie->title}}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">{{$movie->original_title}}</h6>
+                            <p class="card-text text-dark">{{$movie->date}}</p>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
 </div>
 </body>
 

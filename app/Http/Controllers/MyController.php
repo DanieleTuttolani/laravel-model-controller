@@ -10,7 +10,7 @@ class MyController extends Controller
     public function Film()
     {
         $movies = Movie::all();
-        
-        return view('prova' , compact('movies'));
+ 
+        return view('welcome' , compact('movies'));
     }
 }
